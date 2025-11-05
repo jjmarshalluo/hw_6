@@ -1,0 +1,33 @@
+---
+title: "Homework 6"
+format: pdf
+editor: visual
+execute: 
+  echo: false
+  eval: true
+fig-width: 6.5
+fig-height: 8
+---
+
+## Commit 1
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(readr)
+library(kableExtra)
+library(modelsummary)
+
+star<-read_csv(here("data", "star.csv"))
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
