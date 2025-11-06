@@ -2,6 +2,8 @@
 title: "Homework 6"
 format: pdf
 editor: visual
+bibliography: hw_6_refs.bib
+csl: https://www.zotero.org/styles/apa
 execute: 
   echo: false
   eval: true
@@ -23,11 +25,15 @@ star<-read_csv(here("data", "star.csv"))
 
 ```
 
-You can add options to executable code like this
+## Commit 2
 
-```{r}
-#| echo: false
-2 * 2
-```
+As suggested by @divecha2023, tables and figures were used to increase the readability of our document. We used R and packages called tidyverse and ggplot2 to create tables and figures [@R; @tidyverse; @ggplot2].
 
-The `echo: false` option disables the printing of code (only output is displayed).
+## Commit 3
+
+
+Commit 4
+
+\\newpage
+
+#References
