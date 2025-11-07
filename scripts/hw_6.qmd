@@ -20,6 +20,8 @@ library(here)
 library(readr)
 library(kableExtra)
 library(modelsummary)
+library(dplyr)
+library(tinytex)
 
 star<-read_csv(here("data", "star.csv"))
 
@@ -31,6 +33,26 @@ As suggested by @divecha2023, tables and figures were used to increase the reada
 
 ## Commit 3
 
+```{r}
+
+summary_table <- star %>%
+  group_by(sex, frl) %>%
+  summarise(
+    math_mean = round(mean(tmathss, na.rm = TRUE), 2),
+    math_sd   = round(sd(tmathss, na.rm = TRUE), 2),
+    rdg_mean  = round(mean(treadss, na.rm = TRUE), 2),
+    rdg_sd    = round(sd(treadss, na.rm = TRUE), 2)
+  )
+
+datasummary_df(summary_table, output = "kableExtra") 
+
+
+
+```
+
+Table interpretation
+
+The table shows that both boys and girls who are not eligible for free/reduced lunch have higher average math and reading scores. Girls tend to slightly outperform boys in both subjects, while FRL students have lower average scores, highlighting socioeconomic disparities in achievement.
 
 Commit 4
 
