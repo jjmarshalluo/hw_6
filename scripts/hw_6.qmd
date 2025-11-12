@@ -82,7 +82,7 @@ ggplot(star, aes(x = totexp, y = tmathss, color = frl)) +
 
 ```
 
-Figure 1. Students whose teachers have more years of experience tend to earn slightly higher math scores. Across levels of experience, students receiving free/reduced lunch (FRL) perform below those who do not, suggesting that socioeconomic differences persist even after accounting for teacher experience.
+Figure 1. Students whose teachers have more years of experience tend to earn slightly higher math scores. Across levels of experience, students receiving free/reduced lunch (FRL) perform below those who do not, suggesting that socioeconomic differences persist even after accounting for teacher experience. ..
 
 \pagebreak
 
