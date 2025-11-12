@@ -54,8 +54,36 @@ Table interpretation
 
 The table shows that both boys and girls who are not eligible for free/reduced lunch have higher average math and reading scores. Girls tend to slightly outperform boys in both subjects, while FRL students have lower average scores, highlighting socioeconomic disparities in achievement.
 
-Commit 4
+## Commit 4
 
-\\newpage
+```{r}
+# Commit 4
 
-#References
+#| label: fig-commit4
+#| fig-cap: "Relation between teacher experience and math scores, separated by FRL status"
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+ggplot(star, aes(x = totexp, y = tmathss, color = frl)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(
+    title = "Relations Between Teacher Experience and Math Scores",
+    subtitle = "Separate regression lines displayed by free/reduced price lunch status",
+    x = "Teacher Experience (years)",
+    y = "Total Math Scale Score",
+    color = "Lunch status"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom")
+
+
+```
+
+Figure 1. Students whose teachers have more years of experience tend to earn slightly higher math scores. Across levels of experience, students receiving free/reduced lunch (FRL) perform below those who do not, suggesting that socioeconomic differences persist even after accounting for teacher experience.
+
+\pagebreak
+
+## References
